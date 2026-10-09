@@ -1,0 +1,16 @@
+name: ShiftF
+version: ${project.version}
+main: io.github.wilberlol.shiftf.ShiftFPlugin
+api-version: "1.13"
+author: wilberlol
+description: Run a command on Shift + F and cancel the vanilla hand swap.
+commands:
+  shiftfreload:
+    description: Reload ShiftF config
+    aliases: [laereload]
+    permission: shiftf.admin
+    permission-message: You do not have permission.
+permissions:
+  shiftf.admin:
+    description: Reload the ShiftF config
+    default: op

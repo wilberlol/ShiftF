@@ -1,0 +1,33 @@
+# ShiftF Cancel — Shift + F（潛行時按交換副手鍵）觸發指令
+# Run a command when a sneaking player presses the swap-hand key.
+
+# 要執行的指令（不用加 /）。可用 %player% 代表玩家名稱。
+# Command to run (no leading slash). %player% = player name.
+command: "dm open fgmenu"
+
+# 以誰的身分執行：player（玩家）或 console（後台）
+# Who runs it: player or console.
+run-as: player
+
+# 觸發時是否取消「切換副手」動作（預設 true，物品不會被換到副手）
+# Cancel the vanilla hand swap when the shortcut fires (default true).
+cancel-swap: true
+
+# 即使指令因世界／權限被擋下，潛行 + F 仍然取消切換副手
+# Still cancel the swap when blocked by world/permission filters.
+cancel-swap-even-when-blocked: false
+
+# 需要的權限，留空＝所有人都能用（例如 shiftf.use）
+# Permission required; empty = everyone.
+permission: ""
+
+# 世界清單。預設是「黑名單」（清單內的世界不觸發）；worlds-as-whitelist: true 則改為白名單。
+# World list: blacklist by default; set worlds-as-whitelist: true to make it a whitelist.
+worlds: []
+worlds-as-whitelist: false
+
+# 冷卻（毫秒），0＝無冷卻
+# Cooldown in milliseconds, 0 = none.
+cooldown-ms: 0
+# 冷卻中提示（留空＝不提示）
+cooldown-message: ""
